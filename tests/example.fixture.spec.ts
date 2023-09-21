@@ -1,7 +1,7 @@
-import {test, expect} from "../src/fixtures/fixture";
+import {test, expect} from "../src/fixtures/standardFixture";
 import {current} from "../src/utils/current.util";
 
-test.describe('navigation', () => {
+test.describe('navigation (fixture)', () => {
 
   test.beforeEach(async ({act}) => {
     await current.browser.openUrl('https://playwright.dev/');

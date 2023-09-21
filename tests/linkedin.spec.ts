@@ -1,5 +1,5 @@
 import process from "process";
-import {test} from "../src/fixtures/fixture";
+import {test} from "../src/fixtures/standardFixture";
 import {current} from "../src/utils/current.util";
 
 test.describe('linkedin', () => {

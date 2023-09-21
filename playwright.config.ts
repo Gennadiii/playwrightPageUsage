@@ -6,6 +6,8 @@ export default defineConfig({
   globalTimeout: 0,
   timeout: 0,
   testDir: './tests',
+  // testMatch: '**/*example*',
+  testMatch: '**/*linkedin*',
   retries: 0,
   workers: 5,
   reporter: [
@@ -20,13 +22,18 @@ export default defineConfig({
   },
   projects: [
     {
-      name: 'chromium',
+      name: 'Desktop Chromium',
       use: {
         ...devices['Desktop Chromium'],
-        launchOptions: {
-          args: ["--start-maximized"]
-        }
+        viewport: {width: 1920, height: 1080},
       },
-    }
-  ]
+    },
+    {
+      name: 'Desktop Firefox',
+      use: {
+        ...devices['Desktop Firefox'],
+        viewport: {width: 1920, height: 1080},
+      },
+    },
+  ],
 });
